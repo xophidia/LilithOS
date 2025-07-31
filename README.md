@@ -2,7 +2,7 @@
 
 
 
-![Logo Lilith OS](web/logo.png)
+![Logo Lilith OS](logo.png)
 
 
 
