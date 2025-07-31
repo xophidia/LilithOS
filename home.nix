@@ -98,7 +98,7 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.space-bar
-    gnomeExtensions.new-mail-indicator
+    #gnomeExtensions.new-mail-indicator
     
     # Development
 
@@ -186,7 +186,6 @@
         "dash-to-panel@jderose9.github.com"
         "sound-output-device-chooser@kgshank.net"
         "space-bar@luchrioh"
-        "new-mail-indicator@fthx"
       ];
       favorite-apps = [
         "firefox.desktop"
