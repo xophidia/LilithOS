@@ -7,13 +7,22 @@ REPO_URL="https://github.com/xophidia/LilithOS.git"
 TARGET_DIR="/etc/nixos"
 TEMP_DIR="/tmp/nixos-config"
 
-echo "[1/5] Detection de Git et installation"
+echo "[1/5] Detection des pre-requis et installation"
 if ! command -v git &> /dev/null; then
   echo "git non trouvé, installation en cours..."
   sudo nix-env -iA nixos.git
 else
   echo "git déjà installé."
 fi
+
+if ! command -v wget &> /dev/null; then
+  echo "wget non trouvé, installation en cours..."
+  sudo nix-env -iA nixos.wget
+else
+  echo "git déjà installé."
+fi
+
+
 
 echo "[2/5] Clonage du dépôt..."
 sudo rm -rf "$TEMP_DIR"
