@@ -63,3 +63,7 @@ HomeManager : 25.05
 | Common | docker<br>docker-compose<br>jdk24<br>android-studio<br>Python3.14||
 
 Complete list of available applications here.
+
+# Preview
+
+![Logo Lilith OS](web_wall_lilithos.png)
