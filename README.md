@@ -4,8 +4,11 @@
 
 ![Logo Lilith OS](logo.png)
 
+![Status: Alpha](https://img.shields.io/badge/status-alpha-orange?style=for-the-badge)
+![Environment: GNOME](https://img.shields.io/badge/environment-GNOME-4E9A06?logo=gnome&logoColor=white&style=for-the-badge)
+![Base: NixOS](https://img.shields.io/badge/base-NixOS-5277C3?logo=nixos&logoColor=white&style=for-the-badge)
 
-![Plateforme](https://img.shields.io/badge/platform-NixOS-blue) ![GNOME](https://img.shields.io/badge/GNOME-Supported-4E9A06?logo=gnome&logoColor=white)
+
 
 # Download and install
 
