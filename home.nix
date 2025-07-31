@@ -170,22 +170,7 @@
     };
   };
 
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-  programs.alacritty = {
-    enable = true;
-    # custom settings
-    settings = {
-      env.TERM = "xterm-256color";
-      font = {
-        size = 12;
-        draw_bold_text_with_bright_colors = true;
-      };
-      scrolling.multiplier = 5;
-      selection.save_to_clipboard = true;
-    };
-  };
-
-  programs.bash = {
+ programs.bash = {
     enable = true;
     enableCompletion = true;
     # TODO add your custom bashrc here
@@ -237,75 +222,13 @@
     };
     "org/gnome/desktop/background" = {
         picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/wallpaper1.jpg";
-	picture-uri-dark = "file:///home/xophidia/Téléchargements/lilithOS_1920_1200.png";
+	picture-uri-dark = "file:///etc/nixos/backgrounds/lilithOS_1920_1200.png";
         };
   };
-
-  programs.waybar = {
-    enable = true;
-    systemd.enable = true;
-    style = ''
-      ${builtins.readFile "${pkgs.waybar}/etc/xdg/waybar/style.css"}
-
-      window#waybar {
-        background: transparent;
-        border-bottom: none;
-      }
-        '';   
-
-    settings = [{
-      height = 30;
-      layer = "top";
-      position = "bottom";
-      tray = { spacing = 10; };
-      modules-center = [ "sway/window" ];
-      modules-left = [ "sway/workspaces" "sway/mode" ];
-      modules-right = [
-        "network"
-        "cpu"
-        "memory"
-	"battery"
-        "clock"
-        "tray"
-      ];
-      battery = {
-        format = "{capacity}% {icon}";
-        format-alt = "{time} {icon}";
-        format-charging = "{capacity}% ";
-        format-icons = [ "" "" "" "" "" ];
-        format-plugged = "{capacity}% ";
-        states = {
-          critical = 15;
-          warning = 30;
-        };
-      };
-      clock = {
-        format-alt = "{:%Y-%m-%d}";
-        tooltip-format = "{:%Y-%m-%d | %H:%M}";
-      };
-      cpu = {
-        format = "{usage}% ";
-        tooltip = false;
-      };
-      memory = { format = "{}% "; };
-      network = {
-        interval = 1;
-        format-alt = "{ifname}: {ipaddr}/{cidr}";
-        format-disconnected = "Disconnected ⚠";
-        format-ethernet = "{ifname}: {ipaddr}/{cidr}   up: {bandwidthUpBits} down: {bandwidthDownBits}";
-        format-linked = "{ifname} (No IP) ";
-        format-wifi = "{essid} ({signalStrength}%) ";
-      };
-    }];
-  };
-
-
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
-  # incompatible changes.
-  #
   # You can update home Manager without changing this value. See
   # the home Manager release notes for a list of state version
   # changes in each release.
