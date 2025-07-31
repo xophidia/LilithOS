@@ -15,8 +15,8 @@
 Download the NixOS ISO from:
 https://channels.nixos.org/nixos-25.05/latest-nixos-graphical-x86_64-linux.iso
 
-Install it, then open a terminal and run:
-Default user:mdp xophidia:xophidia
+Install it, then open a terminal and run:  
+Default user:mdp xophidia:xophidia  
 
 ```
 sudo -i
