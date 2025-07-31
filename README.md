@@ -46,3 +46,13 @@ NixOS offers a solid foundation :
 ⚠️ Warning / Avertissement
 As of today, this project is currently in the customization phase of NixOS and does not yet provide any ISO or other export formats.
 Please note that the system is under active development and not ready for production use.
+
+# Tools
+
+| Category    | Name     | Comments     |
+|---------------|---------------|---------------|
+| Static analysis    | apktool<br>jadx<br>apkid<br>sqlite<br>vscode     | plugins: java-pack, gradle, python  |
+| Dynamic analysis | frida-tools<br>genymotion<br>ghidra   | plugins: gnudisassembler |
+| Common | docker<br>docker-compose<br>jdk24<br>android-studio<br>Python3.14||
+
+Complete list of available applications here.
