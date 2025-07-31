@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 
+
 {
   # TODO please change the username & home directory to your own
   home.username = "xophidia";
@@ -20,6 +21,7 @@
   #     xxx
   # '';
 
+
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
@@ -28,6 +30,7 @@
 
 
   # Packages that should be installed to the user profile.
+
   home.packages = with pkgs; [
 
     neofetch
@@ -95,11 +98,11 @@
     gnomeExtensions.user-themes
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.vitals
-    gnomeExtensions.dash-to-panel
+    gnomeExtensions.dash-to-dock
     gnomeExtensions.sound-output-device-chooser
     gnomeExtensions.space-bar
     #gnomeExtensions.new-mail-indicator
-    
+
     # Development
 
     docker-compose
@@ -110,7 +113,7 @@
     apktool
     jadx
     apkid
-    sqlite    
+    sqlite
 
     # Android dynamic analysis
 
@@ -118,7 +121,8 @@
     genymotion
     ghidra
     ghidra-extensions.gnudisassembler
-    
+    radare2
+    cutter
 
   ];
 
@@ -138,18 +142,18 @@
     ];
   };
 
-  xdg.desktopEntries = {
-    "gnome-system-monitor" = {
-      name = "Moniteur système";
-      exec = "gnome-system-monitor";
-      icon = "utilities-system-monitor";
-      type = "Application";
-      genericName = "Moniteur de ressources";
-      comment = "Affiche l'utilisation des ressources système";
-      startupNotify = true;
-      categories = [ "Utility" ];
-    };
-  };
+  #xdg.desktopEntries = {
+  #  "gnome-system-monitor" = {
+  #    name = "Moniteur système";
+  #    exec = "gnome-system-monitor";
+  #    icon = "utilities-system-monitor";
+  #    type = "Application";
+  #    genericName = "Moniteur de ressources";
+  #    comment = "Affiche l'utilisation des ressources système";
+  #    startupNotify = true;
+  #    categories = [ "Utility" ];
+  #  };
+  #};
 
   # basic configuration of git, please change to your own
   programs.git = {
@@ -183,13 +187,13 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         "trayIconsReloaded@selfmade.pl"
         "Vitals@CoreCoding.com" #correspond à la barre vitale à droite
-        "dash-to-panel@jderose9.github.com"
+        "dash-to-dock@micxgx.gmail.com"
         "sound-output-device-chooser@kgshank.net"
         "space-bar@luchrioh"
       ];
       favorite-apps = [
         "firefox.desktop"
-	"google-chrome.desktop"
+        "google-chrome.desktop"
         "code.desktop"
         "com.mitchellh.ghostty.desktop"
         "org.gnome.Terminal.desktop"
@@ -205,7 +209,23 @@
       show-temperature = true;
       show-processor = true;
       show-network = true;
-    }; 
+    };
+
+
+  # "org/gnome/shell/extensions/user-theme" = {
+  #    name = "Sweet";
+  #  };
+
+   "org/gnome/shell/extensions/dash-to-dock" = {
+      dock-position = "BOTTOM";
+      dock-fixed = true;
+      transparency-opacity = "DYNAMIC";
+      background-opacity = 0.4;
+      extend-height = false;
+      icon-size-fixed = true;
+      custom-theme-shrink = true;
+      intellhide = false;
+    };
 
    "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -221,7 +241,7 @@
     };
     "org/gnome/desktop/background" = {
         picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/wallpaper1.jpg";
-	picture-uri-dark = "file:///etc/nixos/backgrounds/lilithOS_1920_1200.png";
+        picture-uri-dark = "file:///etc/nixos/backgrounds/lilithOS_1920_1200.png";
         };
   };
 
