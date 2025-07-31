@@ -5,7 +5,7 @@
 ![Logo Lilith OS](logo.png)
 
 
-
+![Plateforme](https://img.shields.io/badge/platform-NixOS-blue) ![GNOME](https://img.shields.io/badge/GNOME-Supported-4E9A06?logo=gnome&logoColor=white)
 
 # Download and install
 
@@ -49,10 +49,13 @@ Please note that the system is under active development and not ready for produc
 
 # Tools
 
+NixOS : 25.11  
+HomeManager : 25.05
+
 | Category    | Name     | Comments     |
 |---------------|---------------|---------------|
 | Static analysis    | apktool<br>jadx<br>apkid<br>sqlite<br>vscode     | plugins: java-pack, gradle, python  |
-| Dynamic analysis | frida-tools<br>genymotion<br>ghidra   | plugins: gnudisassembler |
+| Dynamic analysis | frida-tools<br>genymotion<br>ghidra<br>radare2+Cutter   | plugins: gnudisassembler |
 | Common | docker<br>docker-compose<br>jdk24<br>android-studio<br>Python3.14||
 
 Complete list of available applications here.
