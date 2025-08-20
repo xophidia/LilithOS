@@ -25,7 +25,7 @@ case "$1" in
         echo "Connexion ADB réussie."
 
         echo "Lancement de scrcpy..."
-        sleep 10
+        sleep 20
         scrcpy -s localhost:5555
       else
         echo "Échec de la connexion ADB."
