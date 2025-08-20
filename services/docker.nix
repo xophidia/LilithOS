@@ -24,13 +24,13 @@ users.users.xophidia = {
 };
 
 systemd.services.docker-image-pull = {
-    description = "Pull Nginx Docker Image";
+    description = "Pull Redroid12 Docker Image";
     wantedBy = [ "multi-user.target" ];
     after = [ "docker.service" ];
     requires = [ "docker.service" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.docker}/bin/docker pull nginx";
+      ExecStart = "${pkgs.docker}/bin/docker pull redroid/redroid:12.0.0-latest";
     };
   };
 
