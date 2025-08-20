@@ -21,6 +21,7 @@ Default user:mdp xophidia:xophidia
 ```
 sudo -i
 curl -sL https://raw.githubusercontent.com/xophidia/LilithOS/refs/heads/master/setup.sh | bash
+reboot
 ```
 
 The full installation takes about ten minutes.
