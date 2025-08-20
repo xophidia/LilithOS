@@ -49,8 +49,8 @@ NixOS offers a solid foundation :
 - **Flexibility and customization**: Easily adaptable to various use cases due to modularity and detailed configurations.
 
 ⚠️ Warning / Avertissement
-As of today, this project is currently in the customization phase of NixOS and does not yet provide any ISO or other export formats.
-Please note that the system is under active development and not ready for production use.
+As of today, this project is currently in the customization phase of NixOS and does not yet provide any ISO or other export formats. Please note that the system is under active development and is not ready for production use.
+The creation of a fully customized and bootable ISO image is currently in progress.
 
 # Structure
 ```
