@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "LilithOS";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -45,12 +45,8 @@
               };
             };
 
-
-
-            # TODO replace ryan with your own username
             home-manager.users.xophidia = import ./home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+         
           }
         ];
       };
