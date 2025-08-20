@@ -102,6 +102,7 @@
     # Development
     docker-compose
     android-studio
+    android-tools
     uv
 
     # Android Static analysis
