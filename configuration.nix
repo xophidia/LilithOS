@@ -129,7 +129,6 @@
      google-chrome
      docker
      jdk24
-     android-studio
      python314
      ghostty
      bat
