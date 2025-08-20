@@ -34,7 +34,7 @@
   home.packages = with pkgs; [
 
     neofetch
-    nnn # terminal file manager
+    nnn 
     nautilus
 
     # archives
@@ -43,21 +43,20 @@
     unzip
     p7zip
 
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq      # A lightweight and flexible command-line JSON processor
-    yq-go   # yaml processor https://github.com/mikefarah/yq
-    fzf     # A command-line fuzzy finder
+    # tools
+    ripgrep 
+    jq      
+    yq-go   
+    fzf     
 
-    # networking tools
-    mtr     # A network diagnostic tool
+    # network
+    mtr     
     iperf3
-    dnsutils  # `dig` + `nslookup`
-    ldns    # replacement of `dig`, it provide the command `drill`
-    aria2   # A lightweight multi-protocol & multi-source command-line download utility
-    socat   # replacement of openbsd-netcat
-    nmap    # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    dnsutils
+    ldns    
+    socat   
+    nmap    
+    ipcalc  
 
     # misc
     file
@@ -76,23 +75,20 @@
     nix-output-monitor
 
     # productivity
-    glow # markdown previewer in terminal
-
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
+    glow 
+    btop 
+    iotop
+    iftop
 
     # system call monitoring
-    strace # system call monitoring
-    ltrace # library call monitoring
-    lsof # list open files
+    strace 
+    ltrace 
+    lsof 
 
     # system tools
     sysstat
-    lm_sensors # for `sensors` command
     ethtool
-    pciutils # lspci
-    usbutils # lsusb
+    usbutils
 
     # personnalisation GNOME
     gnomeExtensions.user-themes
@@ -104,25 +100,26 @@
     #gnomeExtensions.new-mail-indicator
 
     # Development
-
     docker-compose
+    android-studio
     uv
 
     # Android Static analysis
-
     apktool
     jadx
     apkid
     sqlite
 
     # Android dynamic analysis
-
     frida-tools
     genymotion
     ghidra
     ghidra-extensions.gnudisassembler
     radare2
     cutter
+    scrcpy
+    wireshark
+    burp-suite
 
   ];
 
@@ -142,25 +139,6 @@
     ];
   };
 
-  #xdg.desktopEntries = {
-  #  "gnome-system-monitor" = {
-  #    name = "Moniteur système";
-  #    exec = "gnome-system-monitor";
-  #    icon = "utilities-system-monitor";
-  #    type = "Application";
-  #    genericName = "Moniteur de ressources";
-  #    comment = "Affiche l'utilisation des ressources système";
-  #    startupNotify = true;
-  #    categories = [ "Utility" ];
-  #  };
-  #};
-
-  # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "Name";
-    userEmail = "email@nixos.com";
-  };
 
   # starship - an customizable prompt for any shell
   programs.starship = {
@@ -211,10 +189,6 @@
       show-network = true;
     };
 
-
-  # "org/gnome/shell/extensions/user-theme" = {
-  #    name = "Sweet";
-  #  };
 
    "org/gnome/shell/extensions/dash-to-dock" = {
       dock-position = "BOTTOM";
