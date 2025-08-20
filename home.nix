@@ -119,7 +119,7 @@
     cutter
     scrcpy
     wireshark
-    burp-suite
+    burpsuite
 
   ];
 
