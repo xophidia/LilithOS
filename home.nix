@@ -137,6 +137,7 @@
       ms-python.python
       vscjava.vscode-java-pack
       vscjava.vscode-gradle
+      yzane.markdown-pdf
     ];
   };
 
