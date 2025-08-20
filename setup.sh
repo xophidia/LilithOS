@@ -6,6 +6,7 @@ set -e
 REPO_URL="https://github.com/xophidia/LilithOS.git"
 TARGET_DIR="/etc/nixos"
 TEMP_DIR="/tmp/nixos-config"
+HOME="/home/xophidia"
 
 echo "[1/5] Detection des pre-requis et installation"
 if ! command -v git &> /dev/null; then
@@ -22,14 +23,18 @@ else
   echo "git déjà installé."
 fi
 
-
-
 echo "[2/5] Clonage du dépôt..."
 sudo rm -rf "$TEMP_DIR"
 git clone "$REPO_URL" "$TEMP_DIR"
 
-#echo "[3/5] Sauvegarde de la configuration actuelle"
-#sudo cp -r "$TARGET_DIR" "$TARGET_DIR.bak.$(date +%Y%m%d%H%M%S)"
+echo "[3/5] Copie du répertoire scripts/ dans le HOME de l'utilisateur"
+if [ -d "$TEMP_DIR/scripts" ]; then
+  mkdir -p "$HOME/scripts"
+  cp -r "$TEMP_DIR/scripts/"* "$HOME/scripts/"
+  echo "Répertoire scripts copié dans $HOME/scripts"
+else
+  echo "Aucun répertoire scripts trouvé dans le dépôt."
+fi
 
 echo "[4/5] Copie des fichiers dans /etc/nixos/"
 sudo cp -r "$TEMP_DIR"/* "$TARGET_DIR"
