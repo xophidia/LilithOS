@@ -23,15 +23,25 @@ users.users.xophidia = {
  extraGroups = [ "wheel" "docker" ];
 };
 
-systemd.services.docker-image-pull = {
-    description = "Pull Redroid12 Docker Image";
-    wantedBy = [ "multi-user.target" ];
-    after = [ "docker.service" ];
-    requires = [ "docker.service" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "${pkgs.docker}/bin/docker pull redroid/redroid:12.0.0-latest";
-    };
+systemd.services.docker-image-pull-redroid = {
+  description = "Pull Redroid12 Docker Image";
+  wantedBy = [ "multi-user.target" ];
+  after = [ "docker.service" ];
+  requires = [ "docker.service" ];
+  serviceConfig = {
+    Type = "oneshot";
+    ExecStart = "${pkgs.docker}/bin/docker pull redroid/redroid:12.0.0-latest";
   };
+};
 
+systemd.services.docker-image-pull-mobsf = {
+  description = "Pull Mobsf Docker Image";
+  wantedBy = [ "multi-user.target" ];
+  after = [ "docker.service" ];
+  requires = [ "docker.service" ];
+  serviceConfig = {
+    Type = "oneshot";
+    ExecStart = "${pkgs.docker}/bin/docker pull opensecurity/mobile-security-framework-mobsf:latest";
+  };
+};
 }
