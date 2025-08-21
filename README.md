@@ -53,12 +53,14 @@ As of today, this project is currently in the customization phase of NixOS and d
 The creation of a fully customized and bootable ISO image is currently in progress.
 
 # Structure
-```
+
 In the $HOME directory:
 
+```
 $HOME
 └── scripts/
     └── redroid.sh # start and stop redroid emulator
+    └── mobsf.sh # start and stop mobsf emulator
 ```
 
 # Tools
@@ -69,7 +71,7 @@ HomeManager : 25.05
 | Category    | Name     | Comments     |
 |---------------|---------------|---------------|
 | Static analysis    | apktool<br>jadx<br>apkid<br>sqlite<br>vscode     | plugins: java-pack, gradle, python  |
-| Dynamic analysis | frida-tools<br>genymotion<br>ghidra<br>radare2+Cutter<br>Redroid (Docker)   | plugins: gnudisassembler |
+| Dynamic analysis | frida-tools<br>genymotion<br>ghidra<br>radare2+Cutter<br>Redroid (Docker)<br> Mobsf   | plugins: gnudisassembler |
 | Common | docker<br>docker-compose<br>jdk24<br>android-studio<br>android-tools<br>Python3.14||
 
 Complete list of available applications here.
